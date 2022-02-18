@@ -69,13 +69,3 @@ class LostHatFrontPageTests(unittest.TestCase):
         value_of_element = len(find_elements_windows)
         self.assertEqual(value_of_element, expected_status_page, f'Products number differ for page {self.base_url}')
 
-    def test_of_me(self):
-        element_expected = "star"
-        list_of_element = ["Starship", 'stardust', "Cat", "dog", "Startrek"]
-        for item in list_of_element:
-            print(f'Text :{item}')
-
-        for item in list_of_element:
-            item_lower = item.lower()
-            with self.subTest(f'Failed item is: {item}'):
-                self.assertIn(element_expected, item_lower, f"expected text {element_expected}")

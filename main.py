@@ -17,6 +17,7 @@ class Mainautodemo(unittest.TestCase):
     def tearDown(self):
         self.driver.close()
 
+
     def assert_element_text(self, driver, xpath, expected_text):
         header_element = driver.find_element(By.XPATH, xpath)
         header_element_text = header_element.text
